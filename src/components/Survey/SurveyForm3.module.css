@@ -1,0 +1,64 @@
+
+.header {
+    margin:auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.button {
+  background-image: linear-gradient(
+    to right,
+    #eb3941,
+    #f15e64,
+    #e14e53,
+    #e2373f
+  );
+  box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+}
+
+.icon {
+  text-align: center;
+  text-align: center;
+}
+.icon a {
+  background-color: #f7f7f7;
+  border-radius: 35px;
+  margin: 6px 6px;
+  width: 45px;
+  height: 45px;
+  line-height: 49px;
+  display: inline-block;
+  color: burlywood;
+  font-size: 1.5rem;
+}
+
+.icon p {
+  font-size: 1.4rem;
+  margin-bottom: 0rem;
+}
+
+.icon a:hover {
+  background-color: burlywood;
+}
+
+.icon a:hover > .twitter {
+  color: #55acee;
+}
+
+.icon a:hover > .mail {
+  color: red;
+}
+
+.icon a:hover > .linkedin {
+  color: #0077b5;
+}
+
+.icon a:hover > .facebook {
+  color: #3b5998;
+}
+
+.icon a:hover > .instagram {
+  color: #5851db;
+}
+
