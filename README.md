@@ -1,1 +1,1 @@
-# SurveySite-ReactJS-JsonServer
+# PLEASE INSTALL DEPENDENCIES
