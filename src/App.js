@@ -6,6 +6,7 @@ import SurveyForm from "./components/Survey/SurveyForm";
 import SurveyForm2 from "./components/Survey/SurveyForm2";
 import SurveyForm3 from "./components/Survey/SurveyForm3";
 import SurveyResult from "./components/SurveyResult/SurveyResult";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 const modalIsShown = (state, action) => {
@@ -75,15 +76,21 @@ const showThirdHandler =() => {
   }
 
   return (
-    <React.Fragment>
-      <SurveyResult/>
-      <Headers />
-      <SurveyList onClick={showFirstHandler} />
-      {modalState.firstModalIsShow && (<SurveyForm onClose={hideCartHandler} onModal2={showSecondHandler} onAddUser={addUserHandler}/>)}
-      {!modalState.firstModalIsShow && modalState.secondModalIsShow && (<SurveyForm2 onModal3={showThirdHandler} userData={userData} onClose={hideCartHandler}/>)}
-      {!modalState.firstModalIsShow &&!modalState.secondModalIsShow && modalState.thirdModalIsShow && (<SurveyForm3 onClose={hideCartHandler} />)}
-      <Footer />
-    </React.Fragment>
+    
+      <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<React.Fragment> 
+        <Headers />
+        <SurveyList onClick={showFirstHandler} />
+        {modalState.firstModalIsShow && (<SurveyForm onClose={hideCartHandler} onModal2={showSecondHandler} onAddUser={addUserHandler}/>)}
+        {!modalState.firstModalIsShow && modalState.secondModalIsShow && (<SurveyForm2 onModal3={showThirdHandler} userData={userData} onClose={hideCartHandler}/>)}
+        {!modalState.firstModalIsShow &&!modalState.secondModalIsShow && modalState.thirdModalIsShow && (<SurveyForm3 onClose={hideCartHandler} />)}
+        <Footer />
+        </React.Fragment>} />
+        <Route path="/surveyResult" element={<SurveyResult />} />
+      </Routes>
+    </BrowserRouter>
+    
   );
 };
 export default App;
