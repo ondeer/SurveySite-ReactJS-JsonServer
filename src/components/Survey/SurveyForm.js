@@ -55,9 +55,6 @@ const SurveyForm = (props) => {
   const submitHandler = (event) => {
     
     event.preventDefault();
-    //console.log(genderSelect);
-    //console.log(enteredFirstName)
-    //console.log(enteredLastName)
 
    /* fetch('http://localhost:8000/users', {
     method: 'POST',
